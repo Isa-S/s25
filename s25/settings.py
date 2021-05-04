@@ -121,6 +121,17 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+# sms相关配置
+TENCENT_SMS_APP_ID = 1400517231  # 自己应用ID
+TENCENT_SMS_APP_KEY = "4ce5bd8ebbe1c6214061488a407ba8fe"  # 自己应用Key
+TENCENT_SMS_SIGN = "王月牙书"  # 自己腾讯云创建签名时填写的签名内容（使用公众号的话这个值一般是公众号全称或简称
+
+# sms模板信息
+TENCENT_SMS_TEMPLATE = {
+    'register': 947220,
+    'login': 947221
+}
+
 
 try:
     from .local_settings import *
